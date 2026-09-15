@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme inline{
-    --font-h1: var(--font-Roboto);
+
 }
 
 :root {
@@ -9,6 +9,9 @@
 }
 
 @layer base {
+    body{
+        margin-left: 10px;
+    }
     h1 {
         font-family: var(--font-h1);
         font-size: 3rem;
