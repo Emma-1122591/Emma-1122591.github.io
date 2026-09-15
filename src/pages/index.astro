@@ -1,5 +1,6 @@
 ---
-
+import { Image } from 'astro:assets';
+import profilePicture from '../images/person.jpg';
 ---
 
 <html lang="en">
@@ -9,9 +10,27 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Personal Branding</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<section>
+			<h1>Hey!</h1>
+			<h2>Ik ben Emma.</h2>
+			<p>Een nieuwschierige software developer met interesse in fullstack development.</p>
+			<Image src={profilePicture} alt="Profile Picture" />
+			<p>Mijn vaardigheden bestaan uit verschillende programmeertalen & frameworks, projectmanagement, samen & zelfstandig werken en onderzoek. <br/>
+				Kenmerken van mij: creatief, doorzettingsvermogen, … <br/></p>
+		</section>
+		<section>
+			<h2>Kom meer over mij te weten!</h2>
+			<h3>Programmeertalen & Frameworks</h3>
+			<p>...</p>
+			<h3>Projectmanagement</h3>
+			<p>...</p>
+			<h3>Onderzoek</h3>
+			<p>...</p>
+		</section>
+		
+		
 	</body>
 </html>
