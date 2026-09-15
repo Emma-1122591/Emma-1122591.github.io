@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+@theme inline{
+    --font-h1: var(--font-Roboto);
+}
+
+:root {
+    --font-Roboto: 'Roboto', sans-serif;
+}
+
+@layer base {
+    h1 {
+        font-family: var(--font-h1);
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    h2 {
+        font-family: var(--font-h1);
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    h3 {
+        font-family: var(--font-h1);
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    p {
+        font-family: var(--font-Roboto);
+        font-size: 1rem;
+    }
+}
