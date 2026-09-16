@@ -1,10 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import profilePicture from '../images/person.jpg';
-import '../styles/global.css';
 ---
 
-<html lang="nl">
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -14,28 +13,24 @@ import '../styles/global.css';
 		<title>Personal Branding</title>
 	</head>
 	<body>
-		<section class="grid grid-cols-2 grid-rows-auto">
-			<h1 class="col-1 row-1 col-span-2">Hey!</h1>
-			<h2 class="col-1 row-2">Ik ben Emma.</h2>
-			<p class="col-1 row-3">Een nieuwschierige software developer met interesse in fullstack development.</p>
-			<Image src={profilePicture} alt="Profile Picture" class="col-2 row-2 row-span-3"/>
-			<p class="col-1 row-4">Mijn vaardigheden bestaan uit verschillende programmeertalen & frameworks, projectmanagement, samen & zelfstandig werken en onderzoek. <br/>
+		<section>
+			<h1>Hey!</h1>
+			<h2>Ik ben Emma.</h2>
+			<p>Een nieuwschierige software developer met interesse in fullstack development.</p>
+			<Image src={profilePicture} alt="Profile Picture" />
+			<p>Mijn vaardigheden bestaan uit verschillende programmeertalen & frameworks, projectmanagement, samen & zelfstandig werken en onderzoek. <br/>
 				Kenmerken van mij: creatief, doorzettingsvermogen, … <br/></p>
 		</section>
-		<section class="grid grid-cols-2 grid-rows-auto">
-			<h2 class="col-1 row-1 col-span-2">Kom meer over mij te weten!</h2>
-			<section class="col-1 row-2 col-span-2">
-				<h3>Programmeertalen & Frameworks</h3>
-				<p>...</p>
-			</section>
-			<section class="col-1 row-3 col-span-2">
-				<h3>Projectmanagement</h3>
-				<p>...</p>
-			</section>
-			<section class="col-1 row-4 col-span-2">
-				<h3>Onderzoek</h3>
-				<p>...</p>
-			</section>
+		<section>
+			<h2>Kom meer over mij te weten!</h2>
+			<h3>Programmeertalen & Frameworks</h3>
+			<p>...</p>
+			<h3>Projectmanagement</h3>
+			<p>...</p>
+			<h3>Onderzoek</h3>
+			<p>...</p>
 		</section>
+		
+		
 	</body>
 </html>
