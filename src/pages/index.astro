@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import profilePicture from '../images/person.jpg';
+import '../styles/global.css'
+import { Button } from '@/src/components/ui/button.js'
 ---
 
 <html lang="en">
@@ -20,6 +22,7 @@ import profilePicture from '../images/person.jpg';
 			<Image src={profilePicture} alt="Profile Picture" />
 			<p>Mijn vaardigheden bestaan uit verschillende programmeertalen & frameworks, projectmanagement, samen & zelfstandig werken en onderzoek. <br/>
 				Kenmerken van mij: creatief, doorzettingsvermogen, … <br/></p>
+			<Button>TEST</Button>	
 		</section>
 		<section>
 			<h2>Kom meer over mij te weten!</h2>
