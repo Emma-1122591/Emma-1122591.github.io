@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import profilePicture from '../images/person.jpg';
+import profilePicture from '../images/image.png';
 import '../styles/global.css';
 import { Button } from '@/src/components/ui/button';
 import { Separator } from '@/src/components/ui/separator'
@@ -65,7 +65,7 @@ const skills_list = [
             </Item>
 			</section>
 			<section class="flex justify-center col-2 row-2 row-span-3">
-                <Image src={profilePicture} alt="Profile Picture"/>
+                <Image src={profilePicture} alt="Profile Picture" class="rounded-md"/>
             </section>
 		</section>
 		<Separator />
