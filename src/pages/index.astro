@@ -1,9 +1,38 @@
 ---
 import { Image } from 'astro:assets';
-import profilePicture from '../images/person.jpg';
+import profilePicture from '../images/image.png';
+import '../styles/global.css';
+import { Button } from '@/src/components/ui/button';
+import { Separator } from '@/src/components/ui/separator'
+import {
+ Item,
+     ItemMedia,
+     ItemContent,
+ ItemActions,
+     ItemGroup,
+     ItemSeparator,
+     ItemTitle,
+     ItemDescription,
+     ItemHeader,
+     ItemFooter,
+} from '@/src/components/ui/item';
+
+const skills_list = [
+	"HTML", 
+	"CSS", 
+	"Python", 
+	"Javascript", 
+	"Typescript",
+	"Tailwind",
+	"SQLite",
+	"SQLalchemy",
+	"Flask",
+	"React (Next.js en Vite",
+	"Component Library: Shadcn"
+];
 ---
 
-<html lang="en">
+<html lang="nl">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,24 +42,62 @@ import profilePicture from '../images/person.jpg';
 		<title>Personal Branding</title>
 	</head>
 	<body>
-		<section>
-			<h1>Hey!</h1>
-			<h2>Ik ben Emma.</h2>
-			<p>Een nieuwschierige software developer met interesse in fullstack development.</p>
-			<Image src={profilePicture} alt="Profile Picture" />
-			<p>Mijn vaardigheden bestaan uit verschillende programmeertalen & frameworks, projectmanagement, samen & zelfstandig werken en onderzoek. <br/>
-				Kenmerken van mij: creatief, doorzettingsvermogen, … <br/></p>
+		<section class="mb-20 grid grid-cols-2 grid-rows-[25%_auto]">
+			<section class="mt-5 col-1 row-1 col-span-2">
+				<h1>Hey!</h1>
+			</section>
+			<section  class="mt-8 col-1 row-2">
+				<Item variant="outline">
+					<ItemContent>
+						<ItemTitle>
+							<h2 class="my-2">Ik ben Emma.</h2>
+						</ItemTitle>
+						<ItemDescription>
+							<p class="mb-2">Een nieuwschierige software developer met interesse in fullstack development.</p>
+							<p class="mb-2">Ik heb ervaring met verschillende programmeertalen & frameworks, projectmanagement, 
+								samen & zelfstandig werken en onderzoek.</p>
+						</ItemDescription>
+						<ItemActions>
+							<Button variant="custom_primary" size="custom_size">Contact</Button>
+							<Button variant="custom_secondary" size="custom_size">CV</Button>
+						</ItemActions>
+					</ItemContent>
+            </Item>
+			</section>
+			<section class="flex justify-center col-2 row-2 row-span-3">
+                <Image src={profilePicture} alt="Profile Picture" class="rounded-md"/>
+            </section>
 		</section>
-		<section>
-			<h2>Kom meer over mij te weten!</h2>
-			<h3>Programmeertalen & Frameworks</h3>
-			<p>...</p>
-			<h3>Projectmanagement</h3>
-			<p>...</p>
-			<h3>Onderzoek</h3>
-			<p>...</p>
-		</section>
-		
-		
+		<Separator />
+		<section class="mt-6 grid grid-cols-2 grid-rows-[auto] gap-2">
+            <section class="mb-8 row-1 col-span-2">
+                <h2>Kom meer over mij te weten!</h2>
+                <p>Ik ben graag creatief bezig en vind het leuk om nieuwe dingen te leren. 
+                    Ik vind het leuk om samen te werken in teamverband, maar zelfstandig aan de slag gaan is ook zeker geen probleem. 
+                    Ik ben graag bezig met projecten van begin tot eind waarbij ik een full-stack functie kan vervullen.
+                    <br><br>Hieronder zal ik mijn vaardigheden opnoemen en toelichten waar nodig.
+                </p>
+            </section>   
+            <section class="mb-4 col-1 row-2">
+                <h3>Programmeertalen & Frameworks</h3>
+                <p>Tijdens mijn opleiding heb ik geleerd om te programmeren met verschillende programmeertalen en frameworks.</p>
+                <p class="mt-2">Programmeertalen en frameworks waar ik ervaring mee heb:</p>
+                <ul class="list-disc list-inside">
+					{skills_list.map((skill) => (
+						<li>{skill}</li>
+					))}
+                </ul>
+            </section>
+            <section class="mb-4 ml-8 col-2 row-2">
+                <h3>Projectmanagement</h3>
+                <p>Tijdens mijn opleiding ben ik ook bezig geweest met Agile werken, 
+                    waarbij we specifiek de methode scrum gebruikte.</p>
+                <p class="mt-2">We hebben scrum bij ieder project ingezet als methode.
+                    Hierdoor heb ik ervaring opgedaan met het opzetten van een project (visie en user story's opschrijven)
+                    en het doorlopen van meerdere sprints vanaf de sprintplanning, naar de sprint zelf met daily's,
+                    door naar de sprint review en afsluiten met de sprint retrospective.
+                </p>
+            </section>
+        </section>
 	</body>
 </html>
